@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="calculadora.css">
+  <title>Calculadora</title>
+</head>
+
+<body>
+  <section class="calculadora">
+    <div class="resultado">
+      <p id="valorOperacao"></p>
+      <p id="finalValue"></p>
+    </div>
+    <div><button type="button" onclick="operator(value)" class="botao operadores" value="/">/</button></div>
+    <div><button class="botao operadores" onclick="operator(value)" value="*">X</button></div>
+    <div><button class="botao operadores" onclick="operator(value)" value="-">-</button></div>
+    <div><button class="botao operadores" onclick="operator(value)" value="+">+</button></div>
+    <div><button type="button" class="botao" onclick="insert(value)" value="7">7</button></div>
+    <div><button type="button" class="botao" onclick="insert(value)" value="8">8</button></div>
+    <div><button type="button" class="botao" onclick="insert(value)" value="9">9</button></div>
+    <div><button type="button" class="botao" onclick="insert(value)" value="4">4</button></div>
+    <div><button type="button" class="botao" onclick="insert(value)" value="5">5</button></div>
+    <div><button type="button" class="botao" onclick="insert(value)" value="6">6</button></div>
+    <div><button type="button" class="botao" onclick="insert(value)" value="1">1</button></div>
+    <div><button type="button" class="botao" onclick="insert(value)" value="2">2</button></div>
+    <div><button type="button" class="botao" onclick="insert(value)" value="3">3</button></div>
+    <div><button type="button" class="botao" onclick="insert(value)" value="0">0</button></div>
+    <div><button type="button" class="botao" onclick="insert(value)" value=".">.</button></div>
+    <div><button type="button" class="botao btn-5-columns" onclick="clean()" value="C">C</button></div>
+    <div id="igual"><button type="button" class="botao igual" onclick="equal()" value="=">=</button></div>
+  </section>
+</body>
+
+<script src="calculadora.js">  </script>
+
+</html>
