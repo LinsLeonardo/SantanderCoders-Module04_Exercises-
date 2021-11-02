@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    h1 {
+      margin: 30px 0 10px 60px;
+    }
+
+    input {
+      margin: 0px 0px 10px 60px;
+      height: 30px;
+      padding: 5px;
+    }
+
+    button {
+      height: 44px;
+      width: 80px;
+    }
+
+    ul>li {
+      border: 1px black solid;
+      max-width: 300px;
+      overflow: auto;
+      list-style: none;
+      padding: 20px;
+      margin-top: 5px;
+    }
+  </style>
+  <title>Cadastro</title>
+</head>
+
+<body>
+
+
+  <section class="container">
+    <h1>Cadastro</h1>
+    <form class="inicial"><input class="usuario" type="text" placeholder="Digite seu nome">
+      <button class="enviar" type="submit">Ok</button>
+      <ul></ul>
+    </form>
+  </section>
+</body>
+<script>
+  const buttonOk = document.querySelector('.enviar')
+  const container = document.querySelector('ul')
+  const usuario = document.querySelector('input.usuario')
+  const form = document.querySelector('form.inicial')
+
+  form.addEventListener('submit', function (evt) {
+    evt.preventDefault();
+    usuario.value = ''
+  })
+
+  function createUser() {
+    const user = document.createElement('li')
+    user.textContent = usuario.value
+    container.appendChild(user)
+    createRemoveBtn(user)
+    return user
+  }
+  function createRemoveBtn(user) {
+    const remover = document.createElement('button')
+
+    remover.textContent = 'Remover'
+    user.appendChild(remover)
+    remover.onclick = () => container.removeChild(user)
+  }
+
+  buttonOk.onclick = function () {
+    if (usuario.value === '') {
+      return
+    }
+    createUser()
+  }
+
+</script>
+
+
+</html>
