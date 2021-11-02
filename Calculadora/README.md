@@ -26,3 +26,6 @@ A calculadora possui as seguintes funções:
 
 - `clean()`
   - Usada para limpar todos os parâmetros da calculadora, função chamada no **botão C**
+
+## Para visualização
+- O funcionamento pode ser verificado através do seguinte [link](https://codepen.io/l-o-lins/pen/BadmENe).
